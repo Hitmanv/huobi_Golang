@@ -21,6 +21,11 @@ func init() {
 	sugaredLogger = zap.New(core).Sugar()
 }
 
+func SetLevel(lvl zapcore.Level) {
+	core := zapcore.NewCore(zapcore.NewConsoleEncoder(encoderCfg), os.Stdout, lvl)
+	sugaredLogger = zap.New(core).Sugar()
+}
+
 func Fatal(template string, args ...interface{}) {
 	sugaredLogger.Fatalf(template, args...)
 }
