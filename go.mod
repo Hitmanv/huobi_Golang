@@ -1,4 +1,4 @@
-module github.com/huobirdcenter/huobi_golang
+module github.com/Hitmanv/huobi_golang
 
 go 1.13
 
